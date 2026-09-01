@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Mensive - Sempurna</title>
+  <!-- Menghubungkan ke file CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h2>Happy Mensive, Sayang ❤️</h2>
+
+  <!-- Wadah Bentuk Hati Teks -->
+  <div class="heart-container" id="heart"></div>
+
+  <!-- Player Spotify -->
+  <div class="spotify-card">
+    <!-- Memanggil foto Mika -->
+    <img src="sayang.jpeg" alt="Foto Mika" class="album-art" id="albumArt">
+    
+    <div class="track-info">
+      <span class="track-title">Sempurna</span>
+      <span class="artist-name">Andra and The BackBone</span>
+    </div>
+
+    <!-- Tombol Play/Pause -->
+    <button id="spotifyPlayBtn" class="spotify-play-btn" aria-label="Play/Pause">
+      <span id="btnIcon">▶</span>
+    </button>
+
+    <!-- Tag Audio -->
+    <audio id="audioPlayer" loop preload="metadata">
+      <source src="lagu-sempurna.mp3" type="audio/mpeg">
+      Browser Anda tidak mendukung elemen audio.
+    </audio>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
