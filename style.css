@@ -1,0 +1,130 @@
+body {
+  background-color: #0b0b0d;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+h2 {
+  color: #ff66b2;
+  text-shadow: 0 0 10px #ff1493;
+  margin-bottom: 20px;
+}
+
+.heart-container {
+  position: relative;
+  width: 480px;
+  height: 440px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Teks LOVE U animasi berulang */
+.heart-text {
+  position: absolute;
+  font-weight: bold;
+  font-size: 13px;
+  white-space: nowrap;
+  color: #ff85c0;
+  text-shadow: 
+    0 0 5px #ff1493,
+    0 0 10px #ff69b4,
+    0 0 15px #ff1493,
+    1px 1px 2px #ffffff;
+  opacity: 0;
+  transform: scale(0);
+  animation: heartPulse 4s infinite ease-in-out;
+}
+
+@keyframes heartPulse {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  35%, 65% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+/* Player Spotify */
+.spotify-card {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: rgba(24, 24, 27, 0.85);
+  padding: 12px 20px;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 105, 180, 0.4);
+  box-shadow: 0 8px 25px rgba(255, 20, 147, 0.3);
+  backdrop-filter: blur(10px);
+  width: 320px;
+}
+
+.album-art {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ff66b2;
+  transition: transform 0.3s ease;
+}
+
+.album-art.playing {
+  animation: rotateCover 8s linear infinite;
+}
+
+@keyframes rotateCover {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.track-info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.track-title {
+  font-weight: bold;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.artist-name {
+  font-size: 12px;
+  color: #ff85c0;
+}
+
+.spotify-play-btn {
+  background-color: #ff1493;
+  color: #fff;
+  border: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  box-shadow: 0 0 10px rgba(255, 20, 147, 0.6);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.spotify-play-btn:hover {
+  transform: scale(1.08);
+  background-color: #ff66b2;
+}
